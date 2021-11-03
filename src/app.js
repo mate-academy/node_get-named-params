@@ -1,7 +1,8 @@
-'use strict';
+"use strict";
 
-const minimist = require('minimist');
+const minimist = require("minimist");
 
-const params = minimist(process.argv.slice(2));
+const { name, lastname, age } = minimist(process.argv.slice(2));
+
 // eslint-disable-next-line
-console.log(`${params.name} ${params.lastname} is ${params.age}`);
+console.log(`${name} ${lastname} is ${age}`);
