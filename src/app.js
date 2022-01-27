@@ -1,5 +1,8 @@
 'use strict';
 
-const { name, lastname, age } = require('minimist')(process.argv);
+
+const minimist = require('minimist');
+
+const { name, lastname, age } = minimist(process.argv.slice(2));
 
 console.log(`${name} ${lastname} is ${age}`);
