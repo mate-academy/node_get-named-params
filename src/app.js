@@ -1,5 +1,7 @@
-import readline from 'readline';
-import minimist from 'minimist';
+'use strict';
+
+const readline = require('readline');
+const minimist = require('minimist');
 
 const terminal = readline.createInterface({
   input: process.stdin,
