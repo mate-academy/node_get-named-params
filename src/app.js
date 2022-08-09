@@ -1,5 +1,7 @@
 /* eslint-disable no-console */
-import minimist from 'minimist';
+'use strict';
+
+const minimist = require('minimist');
 
 const { name, lastname, age } = minimist(process.argv);
 
