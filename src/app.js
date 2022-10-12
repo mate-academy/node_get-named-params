@@ -3,6 +3,6 @@
 
 const minimist = require('minimist');
 
-const result = minimist(process.argv.slice(2));
+const { name, lastname, age } = minimist(process.argv.slice(2));
 
-console.log(`${result.name} ${result.lastname} is ${result.age}`);
+console.log(`${name} ${lastname} is ${age}`);
