@@ -1,9 +1,7 @@
 /* eslint-disable no-console */
 'use strict';
 
-// const { minimist } = require('minimist');
 const minimist = require('minimist');
-// import minimist from "minimist";
 
 const terminal = minimist(process.argv.slice(2));
 
