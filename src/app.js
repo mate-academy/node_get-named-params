@@ -3,8 +3,10 @@
 
 const minimist = require('minimist');
 
-const argvs = minimist(process.argv.slice(2));
+const namedParams = minimist(process.argv.slice(2));
 
-const message = `${argvs.name} ${argvs.lastname} is ${argvs.age}`;
+const { name, lastname, age } = namedParams;
+
+const message = `${name} ${lastname} is ${age}`;
 
 console.log(message);
