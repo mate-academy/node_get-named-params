@@ -3,7 +3,6 @@
   "version": "1.0.0",
   "description": "Named params",
   "main": "src/app.js",
-  "type": "module",
   "scripts": {
     "init": "mate-scripts init",
     "start": "mate-scripts start",
