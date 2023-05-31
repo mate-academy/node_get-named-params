@@ -2,7 +2,6 @@
 /* eslint-disable no-console */
 'use strict';
 
-// src/app.js
 const argv = require('minimist')(process.argv.slice(2));
 
 const { name, lastname, age } = argv;
