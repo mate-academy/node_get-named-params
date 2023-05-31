@@ -1,28 +1,14 @@
+/* eslint-disable max-len */
+/* eslint-disable no-console */
 'use strict';
 
-const args = process.argv.slice(2);
+// src/app.js
+const argv = require('minimist')(process.argv.slice(2));
 
-let name = 'John';
-let lastname = 'Doe';
-let age = 30;
+const { name, lastname, age } = argv;
 
-args.forEach(arg => {
-  const [paramName, paramValue] = arg.split('=');
-
-  switch (paramName) {
-    case '--name':
-      name = paramValue;
-      break;
-    case '--lastname':
-      lastname = paramValue;
-      break;
-    case '--age':
-      age = paramValue;
-      break;
-    default:
-      break;
-  }
-});
-
-// eslint-disable-next-line no-console
-console.log(`${name} ${lastname} is ${age}`);
+if (name && lastname && age) {
+  console.log(`${name} ${lastname} is ${age}`);
+} else {
+  console.log('Invalid or incomplete arguments. Usage: node src/app.js --name=<name> --lastname=<lastname> --age=<age>');
+}
